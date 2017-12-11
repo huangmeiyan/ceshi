@@ -187,6 +187,7 @@
             var pageH,pageW;
             page= {
                 init: function () {
+
                     $(window).resize(function () {
                         page.resize();
                     });
@@ -212,6 +213,9 @@
                         el.on("touchstart", function (e) {
                             start_y = e.touches[0].pageY-length_y;
                             //e.preventDefault();
+                            $("body").on("touchmove",function(e){
+                                e.preventDefault();
+                            });
                         });
                         el.on("touchmove", function (e) {
                             _height>0?_touchMove(e):'';
@@ -226,8 +230,11 @@
                             }
                             el.css('top',length_y+"px");
                             //console.log(length_y);
-                            e.preventDefault();
+                            //e.preventDefault();
                         }
+                        el.on("touchend", function (e) {
+                            $("body").unbind("touchmove");
+                        });
                     }
                 },
                 resize: function () {
