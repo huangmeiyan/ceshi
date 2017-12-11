@@ -35,267 +35,6 @@
 		
 	</ul>
 </div>
-<script type="text/javascript" src="../js/jweixin.js"></script>
-<script> 
-var wx_timestamp = ''; 
-var wx_signature = ''; 
-var wx_nonceStr = '';
-var wx_appId = '';
-var wx_localId;
-
-wx.config({
-    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-    appId: wx_appId, // 必填，公众号的唯一标识
-    timestamp:wx_timestamp , // 必填，生成签名的时间戳
-    nonceStr: wx_nonceStr, // 必填，生成签名的随机串
-    signature:wx_signature,// 必填，签名，见附录1
-    jsApiList: [
-	'startRecord',
-	'stopRecord',
-	'onVoiceRecordEnd',
-	'playVoice',
-	'stopVoice',
-	'onVoicePlayEnd',
-	'uploadVoice',
-	'downloadVoice',
-	'translateVoice',
-	'getNetworkType',
-	'onMenuShareTimeline',
-	'onMenuShareAppMessage',
-	'onMenuShareQQ',
-	'onMenuShareWeibo',
-	'onMenuShareQZone',
-	'chooseImage',
-	'previewImage',
-	'uploadImage',
-	'downloadImage'
-] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-});
-wx_localId=getCookie('localId');
-if(wx_localId)
-{
-wx.ready(function(){
-	wx.stopVoice({
-		localId:wx_localId
-		});
-});
-}
-
-</script>
-<audio id="audio" controls="controls" class="hide"></audio>
-<script>
-
-var bangPlay = new Object;
-bangPlay.playType = 'weixin';//weixin 微信音频  file 语音文件
-bangPlay.lastPlayType = 'weixin';
-bangPlay.audio = $("#audio")[0];
-bangPlay.localId = '';
-bangPlay.fileload = '';
-bangPlay.voicePlay = function(localId){
-	if(bangPlay.playType == 'weixin')
-	{
-		wx.playVoice({
-			localId:localId
-			});
-	}else
-	{
-		bangPlay.audio.src = localId;
-		bangPlay.audio.play();
-	}
-	bangPlay.lastPlayType = bangPlay.playType;
-};
-bangPlay.voiceStop = function(localId){
-	//alert(bangPlay.lastPlayType + "|" + bangPlay.playType);
-	if(bangPlay.lastPlayType == 'weixin')
-	{
-		wx.stopVoice({
-			localId:localId
-			});
-	}else
-	{
-		bangPlay.audio.pause();
-	}
-};
-bangPlay.endVoice = function(){
-	wx.ready(function(){
-	if(bangPlay.playType == 'weixin')
-	{
-		wx.onVoicePlayEnd({
-    			success: function (res) {
-			localId = res.localId; // 返回音频的本地ID
-			endFunction();
-			}
-			});
-	}else
-	{
-		bangPlay.audio.addEventListener("ended",endFunction);
-	}
-	});
-};
-bangPlay.loadVoice = function(media,obj){
-	if(bangPlay.playType == 'weixin')
-	{
-		wx.downloadVoice({
-			serverId: media, // 需要下载的音频的服务器端ID，由uploadVoice接口获得
-			isShowProgressTips: 1, // 默认为1，显示进度提示
-			success: function (res) {
-			localId = res.localId; // 返回音频的本地ID
-			loadSuccess(localId,obj);
-			},
-			fail:function(res){
-			alert('服务出错');
-			}
-		});
-	}else
-	{
-		bangPlay.audio.src = media;
-		loadSuccess(media,obj);
-		/*bangPlay.audio.load();
-		bangPlay.audio.addEventListener("canplaythrough",function(){
-				if(bangPlay.fileload == media) return;//这里的canplaythrough 每次播放都会检查 所以第一次载入后之后都return掉
-				bangPlay.fileload = media;
-				loadSuccess(media,obj);
-		});*/
-	}
-};
-bangPlay.setType = function(type){
-	bangPlay.playType = type;
-}
-bangPlay.setLocalId = function(localId){
-	bangPlay.localId = localId;
-}
-
-</script>
-<script>
-var payListenUrl = "/person/ajaxlistenpay";
-//var newMediaUrl = "/voice/weixinuploadvoice";
-var canListenUrl = "/question/ajaxlisten";
-var loadState = 0;
-
-function loadSuccess(localId,obj)
-{
-	playVoice(localId,obj);
-	obj.attr("data-localId",localId);
-	obj.attr("data-ptype",bangPlay.playType);
-	loadState = 0;
-}
-
-function endFunction()
-{
-	var obj = $("[data-localid='"+bangPlay.localId+"']");
-	obj.find(".pause").addClass("playing");
-	obj.find(".pause").removeClass("pause");
-	obj.find(".listen_span:contains('正在播放')").html("点击播放");
-	obj.find(".play2").removeClass("play2");
-}
-
-function playVoice(localId,obj)
-{
-		if(wx_localId)//播放前 关闭之前的音频
-		{
-			bangPlay.voiceStop(wx_localId);
-		}
-
-		$(".pause").addClass("playing");
-		$(".pause").removeClass("pause");
-		$(".listen_span:contains('正在播放')").html("点击播放");
-
-		obj.parents(".aq-box").siblings().find(".sound-box").removeClass("play2");
-	
-		if(obj.find(".sound-box").hasClass("play2"))
-		{
-			obj.find(".sound-box").removeClass("play2");
-		}else
-		{
-			bangPlay.voicePlay(localId);
-			bangPlay.setLocalId(localId);
-			wx_localId = localId;
-			setCookie('localId',localId,1);
-			obj.find(".listen_span").html("正在播放");
-			obj.find(".sound-box").addClass("pause");
-			obj.find(".sound-box").removeClass("playing");
-			obj.find(".sound-box").addClass("play2");
-		}
-
-}
-(function(){
-var localId;
-
-	function listenVoice(qid,obj)
-	{
-		//语音播放需要用户触发,ajax改为同步click引起的事件相当于一直在进行中
-		$.ajaxSetup({   
-			async : false  
-			}); 
-		$.post(canListenUrl,{qid:qid},function(result){
-			if(result.state == 'success')
-			{
-				bangPlay.setType(result.type);
-				bangPlay.endVoice();
-				bangPlay.loadVoice(result.media,obj);
-			}
-			else
-				alert('服务出错');
-		},'json');
-	}
-
-
-	$(function(){
-		$(document).on('click','.balloon-wrap',function(){
-			var qid = $(this).attr("data-question");
-			location.href = "/question/"+qid;return false;//暂时列表直接进入详情页
-			if(!isWeixin(qid)) return false;
-			var type = $(this).attr("data-type");
-			if(type == 'listen')
-			{
-				localId = $(this).attr("data-localId");
-				if(!localId)
-				{
-					if(loadState == 1) return false; 
-					loadState = 1;
-		
-					listenVoice(qid,$(this));
-				}else
-				{
-					var ptype = $(this).attr("data-ptype");
-					bangPlay.setType(ptype);
-					playVoice(localId,$(this));	
-				}
-			}else
-			{
-				var qid = $(this).attr("data-question");
-				paySuccessParameters.qid = qid;
-				//callpay();
-				$.post(payListenUrl,{qid:qid},function(result){
-					if(result.state == 'success')
-					{
-						paySuccessParameters.type = 'listen';
-						jsApiParameters = JSON.parse(result.jsApiParameters);
-						//paySuccessParameters.paynumber = result.paynumber;
-						callpay();
-					}
-				},'json');
-			}
-			return false;
-		});
-	});
-})()
-	function paySuccess(qid)
-	{
-		$.post(listenUrl,{qid:qid},function(result){
-			if(result.state == 'success')
-			location.href = "/question/"+qid;
-			else
-			alert('错误，请联系客服');
-		},'json');
-	}
-
-</script>
-
-    <script>
-        var freeShareUrl;
-    </script>
-
 
 
 <div class="head-top">
@@ -322,58 +61,11 @@ var localId;
    <a href="javascript:void(0)" class="search-close-a"><span></span></a>
 </div>
 
-
-
-<script>
-var key = "";
-
-$(function(){
-
-
-	$(".search-button").click(function(){
-		var text = $("#search").val();
-		if(!text) return false;
-	});
-
-	 function searchLimitLength()
-	 {
-	 	var obj = $("#search");
-		var value = obj.val();
-		if(value.length > 0)
-		{
-			$(".close").show();
-		}else
-		{
-			$(".close").hide();
-		}
-	 }
-
-	searchLimitLength();
-	$('#search').bind('input propertychange',searchLimitLength); 
-
-	$("#search").focus(function(){
-		$(".footbar").hide();
-	});
-
-	$("#search").blur(function(){
-		$(".footbar").show();
-	});
-
-	$(".close").click(function(){
-		$("#search").val("");
-		$(this).hide();
-	});
-
- 
-});
-
-</script>
 <div class="wrap head-nav">
   <div class="head-tabnav">
    <div class="head-tab head-tab1">
       <a href="http://bang.mbalib.com/list" class="sel" style="width:49%">最新</a>
       <a href="http://bang.mbalib.com/list?type=recommend" class="" style="width:49%">热门</a>
-      <!--<a href="/topic" class="">话题</a>-->
    </div>
    <a href="javascript:void(0)" class="sear-ico"></a>
 </div>
@@ -383,13 +75,13 @@ $(function(){
         <div style="font-size:0;">
             <span class="answer-tx">哈娃，生涯规划师 心理咨询师 </span>
             <div class="answer-mid"><div class="avatar">
-                <img src="./智库帮帮 - 让回答有价值_files/64">
+                <img src="../img/img01.jpg">
             </div>
             <div class="balloon-wrap fl" data-question="967325598418" data-type="pay">
                 <span class="balloon-j"></span>
                 <span class="balloon-mid">
                     <i class="sound-box play"></i>
-                    <span class="listen_span">17人听过</span>
+                    <span class="listen_span">17人看过</span>
                 </span>
             </div>
         </div>
@@ -400,12 +92,12 @@ $(function(){
         <div style="font-size:0;">
             <span class="answer-tx">武宝权，销售智库合伙人</span>
             <div class="answer-mid"><div class="avatar">
-                <img src="./智库帮帮 - 让回答有价值_files/64(1)"></div>
+                <img src="../img/img01.jpg"></div>
                 <div class="balloon-wrap fl" data-question="967325598449" data-type="pay">
                     <span class="balloon-j"></span>
                     <span class="balloon-mid">
                         <i class="sound-box play"></i>
-                        <span class="listen_span">17人听过</span>
+                        <span class="listen_span">17人看过</span>
                     </span>
                 </div>
             </div>
@@ -416,12 +108,12 @@ $(function(){
         <div style="font-size:0;">
             <span class="answer-tx">山海心，创业经验，职场权谋，市场营销，管理学</span>
             <div class="answer-mid"><div class="avatar">
-                <img src="./智库帮帮 - 让回答有价值_files/64(2)">
+                <img src="../img/img01.jpg">
             </div>
                 <div class="balloon-wrap fl" data-question="967325598356" data-type="pay">
                     <span class="balloon-j"></span><span class="balloon-mid">
                     <i class="sound-box play"></i>
-                    <span class="listen_span">14人听过</span></span>
+                    <span class="listen_span">14人看过</span></span>
                 </div>
             </div>
         </div>
@@ -431,13 +123,13 @@ $(function(){
         <div style="font-size:0;">
             <span class="answer-tx">胡姗姗，职业发展咨询师，萨提亚心理咨询师</span>
             <div class="answer-mid"><div class="avatar">
-                <img src="./智库帮帮 - 让回答有价值_files/100px-381e05adf7acb47bc0a877eef2b808d8.jpg">
+                <img src="../img/img01.jpg">
             </div>
                 <div class="balloon-wrap fl" data-question="967325599342" data-type="pay">
                     <span class="balloon-j"></span>
                     <span class="balloon-mid">
                         <i class="sound-box play"></i>
-                        <span class="listen_span">21人听过</span>
+                        <span class="listen_span">21人看过</span>
                     </span>
                 </div>
             </div>
