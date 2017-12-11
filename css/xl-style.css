@@ -445,13 +445,6 @@ em{font-style: normal;}
     color: #666666;
     text-decoration: none;
 }
-.sumSeatArea li:hover{
-    background-color: #6B81A1;
-    color: #FFFFFF;
-}
-.sumSeatArea li:hover a{
-    color: #FFFFFF;
-}
 .sumSeatArea li.active1{
     background-color: #6B81A1;
     color: #FFFFFF;
