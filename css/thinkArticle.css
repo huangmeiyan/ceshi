@@ -29,16 +29,16 @@ img{border:0;}
 .r-main-padding{padding:0 30px; display:block;}
 .topnav-wrap{ width:100%;padding:40px 0; background:#FFF;}
 .topnav{width:100%; background:#FFF; overflow:hidden;}
-.wrap-m{ margin: 5px 250px 0 190px; *margin-top:15px;height:30px; padding-top:10px; *padding:0;}
+.wrap-m{ margin: 5px 250px 0 190px; *margin-top:15px;height:34px; padding-top:10px; *padding:0;}
 .wrap-r{ float:right;width:234px; display:block;}
 .wrap-l{float: left;width: 170px;}
-.wrap-l-logo{ background:url(../img/logo.png) no-repeat;background-size:168px 57px; width:168px; height:57px; margin-top:5px; display:inline-block;}
+.wrap-l-logo{ background:url(../img/thinkLogo.png) no-repeat;background-size:168px 57px; width:168px; height:57px; margin-top:5px; display:inline-block;}
 .wrap-l-logo-s{ display:none;}
 .wrap-l p{ display:none;}
 .wrap-inner-m{ float:right;}
-.search-button{ background:#37a4ee; border:none; height:30px; line-height:30px;width:60px; color:#FFF; font-size:16px; font-size:1.6rem; float:left;}
+.search-button{ background:#37a4ee; border:none; height:34px; line-height:30px;width:60px; color:#FFF; font-size:16px; font-size:1.6rem; float:left;}
 .wrap-inner-l{margin:0 70px 0 0;*margin:0 55px 0 0;}
-.search-text{ border:1px solid #CCC; height:30px;*height:22px;width:100%;*width:95%; padding:3px 5px 2px;}
+.search-text{ border:1px solid #CCC; height:34px;*height:22px;width:100%;*width:95%; padding:3px 5px 2px;}
 
 
 /*main*/
@@ -867,4 +867,6 @@ blockquote{ background:#fdfdfd; border-left:5px solid #37A4EE;padding:5px 20px; 
 }
 .toppicContent p{
     margin: 25px 0;
+    font-size: 16px;
+    line-height: 30px;
 }
