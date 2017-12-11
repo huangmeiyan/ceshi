@@ -73,16 +73,20 @@ a{
 }
 .wrap-min{
     margin:4%;
-    padding-bottom: 70px;
+    padding-bottom: 110px;
 }
 .naTank{
     font-size: 0.6827rem;
     color: #999999;
 }
 .badMit{
-    font-size: 0.8533rem;
+    font-size: 1.0240rem;
     color: #666;
     padding:4px 0;
+    white-space: nowrap;
+}
+.badMit-sec{
+    font-size: 0.9387rem;
 }
 .mitRite{
     font-size: 0.5973rem;
@@ -104,7 +108,7 @@ a{
     border-bottom: 1px solid #e6e6e6;
 }
 .badPrve{
-    width:50px;
+    width:55px;
     height: 40px;
     top:-24px;
     left:41%;
@@ -128,19 +132,20 @@ a{
 .check-guest{
     font-size: 0.6400rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 .goTank{
-    font-size: 0.5547rem;
+    font-size: 0.6400rem;
     font-weight: 600;
     color: #fff;
     background-color: #6c80a1;
     width:100%;
-    height: 55px;
-    line-height: 55px;
+    height: 80px;
+    line-height: 80px;
     margin-top: 40px;
     left:0;
     bottom: 0;
+    letter-spacing: 2px;
 }
 /****  报告提组 开始 ******/
 .badMit-report{
@@ -158,12 +163,12 @@ a{
     color: #333;
 }
 .badMit-iden{
-    font-size: 0.5973rem;
+    font-size: 0.6400rem;
     color: #999;
     line-height: 30px;
 }
 .report-mar-line{
-    margin: 20px 0 30px;
+    margin:40px 0 30px;
 }
 .badMit-editor{
     font-size: 0.6827rem;
