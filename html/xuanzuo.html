@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>研讨会详情</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="../img/logo.png">
     <link rel="stylesheet" href="../css/xl-style.css">
+    <script src="../js/zepto.min.1.js"></script>
     <script src="../js/rem.js"></script>
 </head>
 <body>
@@ -69,7 +75,7 @@
             <br>
         </div>
         <div class="letterReturn">
-            <h2 class="letterTitle Cblue" style="font-size: 0.5411rem;text-align: center;">
+            <h2 class="letterTitle Cblue" style="font-size: 0.6957rem;text-align: center;">
                 <span class="letter-ico"></span><span>参加本次峰会，请填写如下回执函</span>
             </h2>
             <p class="letterT">回执函</p>
@@ -176,8 +182,6 @@
         </div>
     </div>
 
-
-    <script src="../js/zepto.min.1.js"></script>
     <script>
         $(document).ready(function(){
             var pageH,pageW;
@@ -207,7 +211,7 @@
                         //console.log(_height);
                         el.on("touchstart", function (e) {
                             start_y = e.touches[0].pageY-length_y;
-                            e.preventDefault();
+                            //e.preventDefault();
                         });
                         el.on("touchmove", function (e) {
                             _height>0?_touchMove(e):'';
@@ -235,10 +239,15 @@
             page.init();
         });
         $(function () {
-            $(".sumSeatArea li").click(function () {
+            $(".sumSeatArea li").on("click",function () {
+
                 $(this).addClass("active1").siblings().removeClass("active1");
+
             })
         })
+
+
+
     </script>
 </body>
 </html>

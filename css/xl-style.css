@@ -192,7 +192,7 @@ em{font-style: normal;}
     }
 }
 @media screen and (min-width: 1024px) {
-    .rich_media,.sum_main {
+    .rich_media{
         width: 740px;
         margin-left: auto;
         margin-right: auto;
@@ -238,7 +238,7 @@ em{font-style: normal;}
 }
 
 .sum_main{
-    font-size: 0.4638rem;
+    font-size: 0.6184rem;
     color: #666666;
 }
 .topImg,.topImg img{
@@ -284,7 +284,7 @@ em{font-style: normal;}
     font-size: 0.9275rem;
 }
 .sumTheme3{
-    font-size: 0.8rem;
+    font-size: 0.55rem;
     text-align: center;
     padding: 0.2rem;
 }
@@ -292,7 +292,7 @@ em{font-style: normal;}
     padding: 0 0.35rem;
 }
 .sumcTitle{
-    font-size: 0.6184rem;
+    font-size: 0.6957rem;
     color: #333333;
 }
 .sumList{
@@ -304,6 +304,7 @@ em{font-style: normal;}
 .sumList p{
     margin: 0;
     padding: 0.2rem;
+    font-size: 0.6184rem;
 }
 .sumList .sumpadBo{
     padding-bottom: 0.5rem;
@@ -317,7 +318,7 @@ em{font-style: normal;}
 }
 .sumList .sum-Left{
     margin-left: 0.3rem;
-    font-size: 0.4638rem;
+    font-size: 0.6184rem;
 }
 .sumLine{
     display: block;
@@ -341,8 +342,8 @@ em{font-style: normal;}
 }
 .letter-ico,.sum-ico2{
     display: inline-block;
-    width: 0.5rem;
-    height:0.5rem;
+    width: 0.7729rem;
+    height: 0.7729rem;
     background: url(../img/guide.png) no-repeat;
     background-size: cover;
     vertical-align: middle;
@@ -354,7 +355,7 @@ em{font-style: normal;}
 }
 .letterT{
     text-align: center;
-    font-size: 0.4rem;
+    font-size: 0.6957rem;
 }
 .letterInput{
     background-color: #F7F7F7;
@@ -368,6 +369,7 @@ em{font-style: normal;}
     outline-style: none;
     margin-left: 0.3rem;
     height: 100%;
+    font-size: 0.6184rem;
 }
 ::-webkit-input-placeholder {
 　　color:#999;
@@ -419,18 +421,18 @@ em{font-style: normal;}
 .sumSeatArea{
     /*overflow-y: auto;*/
     position: absolute;
-    text-align: center;
+    text-align: left;
     width:100%;
     top:0;
     left: 0;
-    padding: 0;
+    padding: 0 0 0.7729rem 0;
 }
 .sumSeatArea li{
     display: inline-block;
     border-radius: 6px;
     width: 1.5459rem;
     height: 1.5459rem;
-    padding: 0.2rem;
+    /*padding: 0.2rem;*/
     background-color: #EEEEEE;
     margin-top: 0.15rem;
     line-height: 1.5459rem;
@@ -464,6 +466,7 @@ em{font-style: normal;}
     padding: 0.3rem;
     border: none;
     border-radius: 6px;
+    font-size: 0.6184rem;
 }
 .sumFooter img{
     width: 100%;
