@@ -50,6 +50,9 @@ a{
 .color-blue{
     color: #185490!important;
 }
+textarea{
+    font-family: -webkit-body;
+}
 textarea::-webkit-input-placeholder {
     color: #d0cdcd;
 }
@@ -57,6 +60,20 @@ textarea::-webkit-input-placeholder {
 textarea:-moz-placeholder {
     color: #d0cdcd;
 }
+input::-webkit-input-placeholder {
+    color: #d0cdcd;
+}
+
+input:-moz-placeholder {
+    color: #d0cdcd;
+}
+
+textarea,input:focus{
+    outline: none;
+    border: 1px solid #dcdbe2;
+    border-radius: 6px;
+}
+
 
 @-webkit-keyframes x_y{
     0% {
@@ -269,6 +286,59 @@ textarea:-moz-placeholder {
 .ques-return{
     color: #333;
     background-color:#ccc;
+}
+
+.width100{
+    background-color: #f1f2f6;
+}
+
+.tankPer-outbox{
+    margin:4%;
+}
+.tank-person-header{
+    color: #333;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.tank-person-head{
+    width:40px;
+    height: 40px;
+    top: 0;
+    right:10px;
+}
+.ques-box-shadow1{
+    box-shadow: none;
+    background-color: #fff;
+}
+.tankPer-info{
+    height: 40px;
+    background-color: #f4f2fa;
+    width:100%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border:1px solid #dcdbe2;
+    font-size: 15px;
+    line-height: 40px;
+}
+.jianJie{
+    width:calc(100% - 10px);
+    height: 150px!important;
+    padding: 5px;
+    resize: none;
+    line-height: 28px;
+}
+.width100-btn{
+    margin-top: 20px;
+    background-color: #fff;
+}
+.width100-btn .telBtn{
+    width:6.9520rem;
+}
+.telBtn-2{
+    top: 0;
+    right:0;
 }
 /****************  主体内容 结束 ********************/
 

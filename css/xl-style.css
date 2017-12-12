@@ -126,19 +126,15 @@ em{font-style: normal;}
     margin-left: 10px;
 }
 .textWrap{
+    background: rgb(250, 250, 250) repeat repeat 0px 0px;
     margin: 0px;
     padding: 16px;
     max-width: 100%;
     border-top: 1px solid rgb(242, 242, 242);
     color: rgb(153, 153, 153);
-    background-image: none;
-    background-attachment: scroll;
-    background-color: rgb(250, 250, 250);
     box-sizing: border-box !important;
     word-wrap: break-word !important;
-    background-position: 0px 0px;
-    background-repeat: repeat repeat;
-}
+    }
 .toptitle{
     color: rgb(63, 63, 63);
     font-size: 16px;
@@ -297,6 +293,7 @@ em{font-style: normal;}
 }
 .sumList{
     list-style: none;
+    padding-left: 20px;
 }
 .sumList li{
     position: relative;
@@ -311,26 +308,26 @@ em{font-style: normal;}
 }
 .dot{
     display: inline-block;
-    width: 0.2rem;
-    height: 0.2rem;
+    width: 0.5797rem;
+    height: 0.5797rem;
     background-color: #175592;
     border-radius: 50%;
 }
 .sumList .sum-Left{
-    margin-left: 0.3rem;
+    margin-left: 0.75rem;
     font-size: 0.6184rem;
 }
 .sumLine{
     display: block;
     position: absolute;
     top: 0.5rem;
-    left: 0.08rem;
+    left: 0.3rem;
     height: 100%;
     width: 1px;
     background-color: #175592;
 }
 .sumLook{
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     padding-left: 1rem;
 }
 .sumLook a,.sum-Left a{
@@ -367,25 +364,26 @@ em{font-style: normal;}
     border: 0;
     background: none;
     outline-style: none;
-    margin-left: 0.3rem;
+    margin-left: 0.7729rem;
     height: 100%;
     font-size: 0.6184rem;
+    color: #666666;
 }
 ::-webkit-input-placeholder {
-　　color:#999;
-    font-size: 0.25rem;
+　　color:#d1d1d1;
+    font-size: 0.5411rem;
 }
 :-moz-placeholder {
-　　color:#999;
-    font-size: 0.25rem;
+　　color:#d1d1d1;
+    font-size: 0.5411rem;
 }
 ::-moz-placeholder {
-　　color:#999;
-    font-size: 0.25rem;
+　　color:#d1d1d1;
+    font-size: 0.5411rem;
 }
 :-ms-input-placeholder {
-　　color:#999;
-    font-size: 0.25rem;
+　　color:#d1d1d1;
+    font-size: 0.5411rem;
 }
 .botLine{
     border-bottom: 1px solid #DDDDDD;
@@ -396,14 +394,15 @@ em{font-style: normal;}
 .verCode{
     display: inline-block;
     background-color: #6B81A1;
-    padding: 0.1932rem;
+    padding: 0.1932rem 0.3865rem;;
     color: #FFFFFF;
-    height: 0.9275rem;
-    line-height: 0.9275rem;
     border-radius: 5px;
     position: absolute;
     right: 0.3865rem;
     top: 0.3478rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.5411rem;
 }
 .reserve{
     padding: 0.3rem 0.2rem;
@@ -456,12 +455,12 @@ em{font-style: normal;}
     background-color: #6B81A1;
     width: 100%;
     color: #FFFFFF;
-    padding: 0.3rem;
+    height: 2.3188rem;
     border: none;
     border-radius: 6px;
     font-size: 0.6184rem;
 }
 .sumFooter img{
     width: 100%;
-    height: 100%;
+    height: auto;
 }

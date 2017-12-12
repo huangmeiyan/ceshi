@@ -134,7 +134,7 @@ a.border-n{
     border-left:none;
 }
 .sear-ico{
-    background-image:url(http://static.mbalib.com/bang/images/sear.png);
+    /*background-image:url(http://static.mbalib.com/bang/images/sear.png);*/
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/sear.png', sizingMethod='scale')\9;
     background-image:none\9;
     background-repeat:no-repeat;
@@ -174,7 +174,7 @@ a.border-n{
     clear:both;
 }
 .sear-jg-no2{
-    background-image:url(http://static.mbalib.com/bang/images/left2.png);
+    /*background-image:url(http://static.mbalib.com/bang/images/left2.png);*/
     background-repeat:no-repeat;
     background-size:.3rem;
     background-position:8rem center;
@@ -290,7 +290,7 @@ a.border-n{
 }
 .balloon-mid{
     width:188px\9;
-    width:2.5rem;
+    width:3rem;
     height:22px\9;
     height:.3rem;
     line-height:22px\9;
@@ -299,7 +299,7 @@ a.border-n{
     padding:.18rem .2rem;
     background-color:#64c6ef;
     display:block;
-    border-radius:1rem;
+    border-radius:5px;
     border-radius:75px\9;
     behavior: url(ie-css3.htc);
     color:#fff;
@@ -307,25 +307,25 @@ a.border-n{
     font-size:16px\9;
 }
 
-.balloon-j{
-    background-image:url(http://static.mbalib.com/bang/images/ballon-j.png);
-    background-repeat:no-repeat;
-    background-size:.28rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/ballon-j.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    width:28px\9;
-    height:28px\9;
-    width:.28rem;
-    height:.28rem;
-    display:inline-block;
-    position:absolute;
-    left:-14px\9;
-    bottom:10px\9;
-    left:-.14rem;
-    bottom:.1rem;
+.balloon-j {
+    background-image: url(../img/ballon-j.png);
+    background-repeat: no-repeat;
+    background-size: .28rem;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/ballon-j.png', sizingMethod='scale')\9;
+    background-image: none\9;
+    width: 28px\9;
+    height: 28px\9;
+    width: .28rem;
+    height: .28rem;
+    display: inline-block;
+    position: absolute;
+    left: -14px\9;
+    bottom: 10px\9;
+    left: -.14rem;
+    bottom: .1rem;
 }
 
-.play{
+/*.play{
     background-image:url(http://static.mbalib.com/bang/images/play.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play.png', sizingMethod='scale')\9;
 }
@@ -336,7 +336,7 @@ a.border-n{
 .pause{
     background-image:url(http://static.mbalib.com/bang/images/pause.gif);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/pause.gif', sizingMethod='scale')\9;
-}
+}*/
 .sound-box{
     background-repeat:no-repeat;
     background-size:.3rem;
@@ -830,7 +830,7 @@ a.border-n{
     margin:0 auto;
 }
 
-.jy-more-ico{
+/*.jy-more-ico{
     display:block;
     float:left;
     background-image:url(http://static.mbalib.com/bang/images/jy-more.png);
@@ -844,7 +844,7 @@ a.border-n{
     width:30px\9;
     height:30px\9;
     margin-right:10px\9;
-}
+}*/
 
 
 .tj-people-lay .atten-box
@@ -1120,7 +1120,7 @@ a.border-n{
     height:19px\9;
     margin:0 8px 0 0\9;
 }
-.yescheck{
+/*.yescheck{
     background-image:url(http://static.mbalib.com/bang/images/gou.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gou.png', sizingMethod='scale')\9;
     background-image:none\9;
@@ -1130,7 +1130,7 @@ a.border-n{
     background-image:url(http://static.mbalib.com/bang/images/gou-no.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gou-no.png', sizingMethod='scale')\9;
     background-image:none\9;
-}
+}*/
 
 .answer-btn-wrap{
     width:4.5rem;
@@ -1308,7 +1308,7 @@ a.border-n{
     display:inline-block;
     background-image:none\9;
 }
-.user-ico1{
+/*.user-ico1{
     background-image:url(http://static.mbalib.com/bang/images/user-2.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-2.png', sizingMethod='scale')\9;
 
@@ -1353,7 +1353,7 @@ a.border-n{
     width:25px\9;
     height:25px\9;
     margin-top:5px\9;
-}
+}*/
 
 .edit-ico{
     font-size:.22rem;
@@ -1389,7 +1389,7 @@ a.border-n{
     display:inline-block;
     float:left;
 }
-.edit-ico1{
+/*.edit-ico1{
     background-image:url(http://static.mbalib.com/bang/images/user-6.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-6.png', sizingMethod='scale')\9;
 }
@@ -1397,7 +1397,7 @@ a.border-n{
 .edit-ico2{
     background-image:url(http://static.mbalib.com/bang/images/user-5.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-5.png', sizingMethod='scale')\9;
-}
+}*/
 
 /*ä»–äººé—®*/
 .t-question{
@@ -1407,7 +1407,7 @@ a.border-n{
     overflow:hidden;
 }
 
-.record-ico{
+/*.record-ico{
     background-image:url(http://static.mbalib.com/bang/images/play1.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play1.png', sizingMethod='scale')\9;
 }
@@ -1422,7 +1422,7 @@ a.border-n{
 .pause-ico{
     background-image:url(http://static.mbalib.com/bang/images/play3.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play3.png', sizingMethod='scale')\9;
-}
+}*/
 
 .play-btn{
     display:block;
@@ -1561,7 +1561,7 @@ a.border-n{
     font-size:18px\9;
 }
 
-.none-img{
+/*.none-img{
     background-image:url(http://static.mbalib.com/bang/images/none.png);
     background-position:center;
     background-repeat:no-repeat;
@@ -1587,7 +1587,7 @@ a.border-n{
     color:#b9babe;
     margin:.2rem auto;
     display:none;
-}
+}*/
 /*å¦‚ä½•ä½¿ç”¨*/
 .helppage{
     margin:.3rem .3rem 1rem;
@@ -1654,7 +1654,7 @@ a.border-n{
     margin:10px 0 0;
 }
 .wx-close{
-    background-image:url(http://static.mbalib.com/bang/images/close-2.png);
+    /*background-image:url(http://static.mbalib.com/bang/images/close-2.png);*/
     width:18px;
     height:18px;
     display:block;
@@ -1762,7 +1762,7 @@ a.border-n{
     margin:15px auto 0\9;
     border-radius:8px;
 }
-.play-noteico{
+/*.play-noteico{
     display:block;
     float:left;
     background-image:url(http://static.mbalib.com/bang/images/note-ts.png);
@@ -1779,7 +1779,7 @@ a.border-n{
     background-image:none\9;
     margin:13px 10px 0 0\9;
 
-}
+}*/
 
 .play-note p{
     color:#999fb7;
@@ -1804,7 +1804,7 @@ a.border-n{
 .head-top-logo{
     width:580px;
     margin:0 auto;
-    background-image:url(http://static.mbalib.com/bang/images/bangico.png);
+    /*background-image:url(http://static.mbalib.com/bang/images/bangico.png);*/
     border-radius:10px;
     background-size:50px;
     background-position:left center;
@@ -1916,13 +1916,13 @@ a.border-n{
 .gl-lay-box .gl-ico{
     display:inline-block;
     float:left;
-    background-image:url(http://static.mbalib.com/bang/images/gl-ico.png);
+    /*background-image:url(http://static.mbalib.com/bang/images/gl-ico.png);*/
     background-repeat:no-repeat;
     background-size:.38rem;
     width:.4rem;
     height:.4rem;
     margin-right:.2rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gl-ico.png', sizingMethod='scale')\9;
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gl-ico.png', sizingMethod='scale')\9;*/
     background-image:none\9;
     background-size:30px\9;
     width:30px\9;
@@ -1983,11 +1983,11 @@ a.border-n{
 
 .classico i{
     display:inline-block;
-    background-image:url(http://static.mbalib.com/bang/images/class-ico2.png);
+    /*background-image:url(http://static.mbalib.com/bang/images/class-ico2.png);*/
     background-size:.2rem;
     height:.2rem;
     width:.2rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/class-ico2.png', sizingMethod='scale')\9;
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/class-ico2.png', sizingMethod='scale')\9;*/
     background-image:none\9;
     background-size:20px\9;
     height:20px\9;

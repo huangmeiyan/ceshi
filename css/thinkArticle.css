@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,img,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,hgroup,menu,nav,summary,time,mark,audio,video,header,footer{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;background:transparent; }
 html{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -48,7 +48,7 @@ img{border:0;}
 .hot-lab .main-title{ border-bottom:1px solid #e8e8e8; font-size:14px; font-size:1.4rem; line-height:24px; padding-bottom:10px;color:#9ba1b1;overflow:hidden; *width:100%; _float:left; width:100%;}
 .hot-lab .main-title h2{ font-size:22px;font-size:2.2rem; font-weight:normal; color:#565d74;padding-left:8px; margin:0 15px 0 0; display:inline;border-left:4px solid #37a4ee;float:left;}
 .cont-lab{ margin:30px 0 15px; +margin-bottom:30px; overflow:hidden;}
-.hot-rec{ width:230px;display:block; float:left; text-align:center; margin-bottom:15px;}
+.hot-rec{ width:230px;display:block; float:left; text-align:center; margin-bottom:30px;}
 
 .feature-img{ float:left; width:230px; height:148px; border: 1px solid #e8e8e8; overflow:hidden;}
 .feature-minw{display: table-cell; vertical-align:middle; text-align:center;  *display: block; *font-size: 130px;*font-family:Arial;width:230px; height:146px;}
@@ -812,7 +812,12 @@ blockquote{ background:#fdfdfd; border-left:5px solid #37A4EE;padding:5px 20px; 
     .hot-rec{ width:100%;overflow:hidden;}
     .feature-img{ width:99%; height:auto;}
     .feature-minw{ width:432px; height:200px;}
-    .feature-minw img{ vertical-align:middle; height:auto;max-width:100%;width:expression(this.width > 230 ? "230px" : this.width);}
+        .feature-minw img {
+            vertical-align: middle;
+            height: auto;
+            max-width: 100%;
+            width: 100%; /*width:expression(this.width > 230 ? "230px" : this.width);*/
+        }
     .hot-rec-title{ width:100%;}
     .classtag-ico{ width:100%; margin-top:25px; display:block;}
     .single-post-ico{ margin:0 auto;width:140px; background:#F00; float:none;}
