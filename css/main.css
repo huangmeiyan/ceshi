@@ -222,13 +222,17 @@ a.border-n{
     margin:0;
     padding:0;
 }
-.answer-tx{
-    font-size:.18rem;
-    font-size:14px\9;
-    color:#6e6e6e;
-    margin:10px 0 0\9;
-    margin:.15rem 0 0;
-    display:inline-block;
+.answer-tx, .answer-qa {
+    font-size: .18rem;
+    font-size: 14px\9;
+    color: #6e6e6e;
+    margin: 10px 0 0\9;
+    margin: .15rem 0 0;
+    display: inline-block;
+}
+.answer-qa {
+    color: #1E9DD8;
+    float: right;
 }
 .answer-mid{
     margin:15px 0 0\9;
@@ -271,40 +275,30 @@ a.border-n{
     border-radius:50%;
 }
 
-/*.vico{
-	background-image:url(http://static.mbalib.com/bang/images/vico.png);
-	background-repeat:no-repeat;
-	background-size:.23rem;
-	width:.25rem;
-	height:.25rem;
-	display:block;
-	position:absolute;
-	right:-.02rem;
-	bottom:-.02rem;
-	z-index:999;
-}
-*/
 .balloon-wrap{
     position:relative;
     cursor:pointer;
 }
-.balloon-mid{
-    width:188px\9;
-    width:3rem;
-    height:22px\9;
-    height:.3rem;
-    line-height:22px\9;
-    line-height:.3rem;
-    padding:15px\9;
-    padding:.18rem .2rem;
-    background-color:#64c6ef;
-    display:block;
-    border-radius:5px;
-    border-radius:75px\9;
+.balloon-mid {
+    width: 188px\9;
+    width: 3.2rem;
+    height: 22px\9;
+    height: .3rem;
+    line-height: 22px\9;
+    line-height: .3rem;
+    padding: 15px\9;
+    padding: .18rem 0;
+    /*background-color:#64c6ef;*/
+    display: block;
+    border-radius: 5px;
+    border-radius: 75px\9;
     behavior: url(ie-css3.htc);
-    color:#fff;
-    font-size:.22rem;
-    font-size:16px\9;
+    color: #666666;
+    font-size: .22rem;
+    font-size: 14px\9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .balloon-j {
@@ -325,18 +319,6 @@ a.border-n{
     bottom: .1rem;
 }
 
-/*.play{
-    background-image:url(http://static.mbalib.com/bang/images/play.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play.png', sizingMethod='scale')\9;
-}
-.playing{
-    background-image:url(http://static.mbalib.com/bang/images/playing.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/playing.png', sizingMethod='scale')\9;
-}
-.pause{
-    background-image:url(http://static.mbalib.com/bang/images/pause.gif);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/pause.gif', sizingMethod='scale')\9;
-}*/
 .sound-box{
     background-repeat:no-repeat;
     background-size:.3rem;
@@ -373,22 +355,7 @@ a.border-n{
     font-size:18px\9;
     color:#999;
 }
-.cz-answer{
-    color: #b7b7b7;
-    background-image:url(http://static.mbalib.com/bang/images/like.png);
-    background-repeat:no-repeat;
-    background-size:.2rem;
-    background-position:2.3rem center;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/like.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    background-size:15px\9;
-    background-position:170px center\9;
-    margin:.3rem auto;
-    font-size: .2rem;
-    margin:22px auto\9;
-    font-size: 16px\9;
-    text-align:center;
-}
+
 
 .cz-btn{
     background-color:#d4d4d5;
@@ -586,21 +553,7 @@ a.border-n{
     height:38px\9;
     line-height:38px\9;
 }
-.close{
-    background-image:url(http://static.mbalib.com/bang/images/close.png);
-    background-repeat:no-repeat;
-    float:right;
-    background-size:.25rem;
-    width:.26rem;
-    height:.26rem;
-    margin-top:.12rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/close.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    background-size:25px\9;
-    width:26px\9;
-    height:26px\9;
-    margin-top:12px\9;
-}
+
 
 .input-wrap{
     margin-right:1rem;
@@ -631,22 +584,6 @@ a.border-n{
 .search-jg{
     background-position:15px\9;
     text-align:left;
-}
-.input-searico{
-    background-image:url(http://static.mbalib.com/bang/images/sear-gr.png);
-    background-repeat:no-repeat;
-    background-size:.25rem;
-    float:left;
-    display:block;
-    width:.25rem;
-    height:.25rem;
-    margin:.12rem .1rem 0 0;
-    background-image:none\9;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/sear-gr.png', sizingMethod='scale');
-    background-size:25px\9;
-    width:25px\9;
-    height:25px\9;
-    margin:12px 10px 0 0\9;
 }
 
 
@@ -681,62 +618,15 @@ a.border-n{
     padding:.1rem;
     padding:10px\9;
 }
-.search-close-a span{
-    display:block;
-    float:left;
-    width:.3rem;
-    height:.3rem;
-    width:30px\9;
-    height:30px\9;
-    background-image:url(http://static.mbalib.com/bang/images/close-3.png);
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:.3rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://192.168.1.11/bang/http://static.mbalib.com/bang/images/close-3.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    background-size:30px\9;
-}
 
-.search-ico{
-    background-image:url(http://static.mbalib.com/bang/images/sear-gr.png);
-    background-repeat:no-repeat;
-    background-size:.25rem;
-    width:.25rem;
-    height:.25rem;
-    margin-right:.1rem;
-    background-size:20px\9;
-    width:20px\9;
-    height:20px\9;
-    margin-right:10px\9;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/sear-gr.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    margin-top:-2px;
-    display:inline-block;
-    vertical-align:middle;
-}
+
+
 
 .sear-list .balloon-wrap{
     margin:.1rem 0;
 }
 
-.sear-list-more{
-    background-image:url(http://static.mbalib.com/bang/images/left.png);
-    background-repeat:no-repeat;
-    background-position:6rem center;
-    background-size:.2rem;
-    font-size:.2rem;
-    padding:.2rem .1rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/left.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    background-position:45px center\9;
-    background-size:15px\9;
-    font-size:16px\9;
-    padding:15px 8px\9;
-    text-align:center;
-    display:block;
-    color:#4ac3f5;
-    background-color:#fff;
-}
+
 
 .atten-nav{
     text-align:left;
@@ -830,21 +720,6 @@ a.border-n{
     margin:0 auto;
 }
 
-/*.jy-more-ico{
-    display:block;
-    float:left;
-    background-image:url(http://static.mbalib.com/bang/images/jy-more.png);
-    background-size:.4rem;
-    width:.4rem;
-    height:.4rem;
-    margin-right:.1rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/jy-more.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    background-size:30px\9;
-    width:30px\9;
-    height:30px\9;
-    margin-right:10px\9;
-}*/
 
 
 .tj-people-lay .atten-box
@@ -1120,17 +995,6 @@ a.border-n{
     height:19px\9;
     margin:0 8px 0 0\9;
 }
-/*.yescheck{
-    background-image:url(http://static.mbalib.com/bang/images/gou.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gou.png', sizingMethod='scale')\9;
-    background-image:none\9;
-}
-
-.nocheck{
-    background-image:url(http://static.mbalib.com/bang/images/gou-no.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gou-no.png', sizingMethod='scale')\9;
-    background-image:none\9;
-}*/
 
 .answer-btn-wrap{
     width:4.5rem;
@@ -1308,52 +1172,7 @@ a.border-n{
     display:inline-block;
     background-image:none\9;
 }
-/*.user-ico1{
-    background-image:url(http://static.mbalib.com/bang/images/user-2.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-2.png', sizingMethod='scale')\9;
 
-}
-
-.user-ico2{
-    background-image:url(http://static.mbalib.com/bang/images/user-7.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-7.png', sizingMethod='scale')\9;
-}
-
-.user-ico3{
-    background-image:url(http://static.mbalib.com/bang/images/user-4.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-4.png', sizingMethod='scale')\9;
-}
-
-.user-ico4{
-    background-image:url(http://static.mbalib.com/bang/images/user-1.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-1.png', sizingMethod='scale')\9;
-}
-
-.user-ico5{
-    background-image:url(http://static.mbalib.com/bang/images/user-3.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-3.png', sizingMethod='scale')\9;
-}
-.user-ico6{
-    background-image:url(http://static.mbalib.com/bang/images/user-8.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-8.png', sizingMethod='scale')\9;
-}
-
-.arrow-l{
-    display:block;
-    float:right;
-    background-image:url(http://static.mbalib.com/bang/images/left2.png);
-    background-repeat:no-repeat;
-    background-size:.3rem;
-    width:.3rem;
-    height:.3rem;
-    margin-top:.05rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/left2.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    background-size:25px\9;
-    width:25px\9;
-    height:25px\9;
-    margin-top:5px\9;
-}*/
 
 .edit-ico{
     font-size:.22rem;
@@ -1389,15 +1208,6 @@ a.border-n{
     display:inline-block;
     float:left;
 }
-/*.edit-ico1{
-    background-image:url(http://static.mbalib.com/bang/images/user-6.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-6.png', sizingMethod='scale')\9;
-}
-
-.edit-ico2{
-    background-image:url(http://static.mbalib.com/bang/images/user-5.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/user-5.png', sizingMethod='scale')\9;
-}*/
 
 /*ä»–äººé—®*/
 .t-question{
@@ -1407,22 +1217,6 @@ a.border-n{
     overflow:hidden;
 }
 
-/*.record-ico{
-    background-image:url(http://static.mbalib.com/bang/images/play1.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play1.png', sizingMethod='scale')\9;
-}
-.opening-ico{
-    background-image:url(http://static.mbalib.com/bang/images/play2.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play2.png', sizingMethod='scale')\9;
-}
-.open-ico{
-    background-image:url(http://static.mbalib.com/bang/images/play2.gif);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play2.gif', sizingMethod='scale')\9;
-}
-.pause-ico{
-    background-image:url(http://static.mbalib.com/bang/images/play3.png);
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/play3.png', sizingMethod='scale')\9;
-}*/
 
 .play-btn{
     display:block;
@@ -1561,34 +1355,6 @@ a.border-n{
     font-size:18px\9;
 }
 
-/*.none-img{
-    background-image:url(http://static.mbalib.com/bang/images/none.png);
-    background-position:center;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:.6rem;
-    width:.6rem;
-    height:.6rem;
-    background-size:60px\9;
-    width:60px\9;
-    height:60px\9;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/none.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    display:block;
-    margin:0 auto;
-}
-.loading{
-    background-image:url(http://static.mbalib.com/bang/images/load.gif);
-    background-repeat:no-repeat;
-    background-size:.25rem;
-    background-position:2.3rem center;
-    font-size:.24rem;
-    text-align:center;
-    color:#b9babe;
-    margin:.2rem auto;
-    display:none;
-}*/
-/*å¦‚ä½•ä½¿ç”¨*/
 .helppage{
     margin:.3rem .3rem 1rem;
     margin:20px 20px 75px\9;
@@ -1654,7 +1420,6 @@ a.border-n{
     margin:10px 0 0;
 }
 .wx-close{
-    /*background-image:url(http://static.mbalib.com/bang/images/close-2.png);*/
     width:18px;
     height:18px;
     display:block;
@@ -1762,24 +1527,6 @@ a.border-n{
     margin:15px auto 0\9;
     border-radius:8px;
 }
-/*.play-noteico{
-    display:block;
-    float:left;
-    background-image:url(http://static.mbalib.com/bang/images/note-ts.png);
-    background-repeat:no-repeat;
-    background-position:left center;
-    background-size:.28rem;
-    width:.28rem;
-    height:.28rem;
-    margin:.15rem .1rem 0 0;
-    background-size:21px\9;
-    width:21px\9;
-    height:21px\9;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/note-ts.png', sizingMethod='scale')\9;
-    background-image:none\9;
-    margin:13px 10px 0 0\9;
-
-}*/
 
 .play-note p{
     color:#999fb7;
@@ -1804,7 +1551,6 @@ a.border-n{
 .head-top-logo{
     width:580px;
     margin:0 auto;
-    /*background-image:url(http://static.mbalib.com/bang/images/bangico.png);*/
     border-radius:10px;
     background-size:50px;
     background-position:left center;
@@ -1916,13 +1662,11 @@ a.border-n{
 .gl-lay-box .gl-ico{
     display:inline-block;
     float:left;
-    /*background-image:url(http://static.mbalib.com/bang/images/gl-ico.png);*/
     background-repeat:no-repeat;
     background-size:.38rem;
     width:.4rem;
     height:.4rem;
     margin-right:.2rem;
-    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/gl-ico.png', sizingMethod='scale')\9;*/
     background-image:none\9;
     background-size:30px\9;
     width:30px\9;
@@ -1983,11 +1727,9 @@ a.border-n{
 
 .classico i{
     display:inline-block;
-    /*background-image:url(http://static.mbalib.com/bang/images/class-ico2.png);*/
     background-size:.2rem;
     height:.2rem;
     width:.2rem;
-    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.mbalib.com/bang/images/class-ico2.png', sizingMethod='scale')\9;*/
     background-image:none\9;
     background-size:20px\9;
     height:20px\9;
@@ -2047,8 +1789,6 @@ a.border-n{
     font-size:0;
     margin-bottom:.18rem;
     overflow:hidden;
-    /*    background: rgba(59, 60, 60, 0.6);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);*/
 }
 .ht-list img{
     width:100%;
@@ -2124,29 +1864,18 @@ a.border-n{
     margin-bottom:-4px;
 }
 .ht-body .aq-box .answer-tx,.tj-people-lay .atten-cont .nub{
-    width:99%; /* å¿…é¡»è®¾ç½®å®½åº¦ */
-    word-break:keep-all;/* ä¸æ¢è¡Œ */
-    white-space:nowrap;/* ä¸æ¢è¡Œ */
-    overflow:hidden;/* å†…å®¹è¶…å‡ºå®½åº¦æ—¶éšè—è¶…å‡ºéƒ¨åˆ†çš„å†…å®¹ */
+    width:99%; 
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
     text-overflow:ellipsis;}
-/*.ht-body .aq-box .time{
-     font-size:.24rem;
-     line-height:.66rem;
-     margin:0 0 0 .2rem;
-     font-size:24px\9;
-     line-height:66px\9;
-     margin:0 0 0 20px\9;
-     display:block;
-     color:#c3c3c3;
-     float:left;
-    }
-*/.ht-body .aq-box{
+
+.ht-body .aq-box{
       margin-bottom:0;
       border-bottom:1px #eeeded solid;
   }
 .fix-tw{
     background:url(images/share_copy-110.png) no-repeat;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/share_copy-110.png', sizingMethod='scale')\9;
     background-image:none\9;
     width:60px\9;
     height:60px\9;

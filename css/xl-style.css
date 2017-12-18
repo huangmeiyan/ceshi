@@ -385,11 +385,11 @@ em{font-style: normal;}
 　　color:#d1d1d1;
     font-size: 0.5411rem;
 }
-.botLine{
+.botLine {
     border-bottom: 1px solid #DDDDDD;
     padding: 0.3rem 0.2rem;
-    height: 1.3140rem;
-    line-height: 1.3140rem;
+    height: 1.5459rem;
+    line-height: 1.5459rem;
 }
 .verCode{
     display: inline-block;
@@ -399,7 +399,7 @@ em{font-style: normal;}
     border-radius: 5px;
     position: absolute;
     right: 0.3865rem;
-    top: 0.3478rem;
+    top: 0.45rem;
     border: none;
     cursor: pointer;
     font-size: 0.5411rem;

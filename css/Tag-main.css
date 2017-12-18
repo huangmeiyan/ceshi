@@ -35,9 +35,6 @@ a{
 .v-middle{
     vertical-align: middle;
 }
-.inlB{
-    display: inline-block;
-}
 .block{
     display: block;
 }
@@ -50,30 +47,6 @@ a{
 .color-blue{
     color: #185490!important;
 }
-textarea{
-    font-family: -webkit-body;
-}
-textarea::-webkit-input-placeholder {
-    color: #d0cdcd;
-}
-
-textarea:-moz-placeholder {
-    color: #d0cdcd;
-}
-input::-webkit-input-placeholder {
-    color: #d0cdcd;
-}
-
-input:-moz-placeholder {
-    color: #d0cdcd;
-}
-
-textarea,input:focus{
-    outline: none;
-    border: 1px solid #dcdbe2;
-    border-radius: 6px;
-}
-
 
 @-webkit-keyframes x_y{
     0% {
@@ -100,20 +73,16 @@ textarea,input:focus{
 }
 .wrap-min{
     margin:4%;
-    padding-bottom: 110px;
+    padding-bottom: 70px;
 }
 .naTank{
     font-size: 0.6827rem;
     color: #999999;
 }
 .badMit{
-    font-size: 1.0240rem;
+    font-size: 0.8533rem;
     color: #666;
-    padding:10px 0;
-    white-space: nowrap;
-}
-.badMit-sec{
-    font-size: 0.9387rem;
+    padding:4px 0;
 }
 .mitRite{
     font-size: 0.5973rem;
@@ -135,7 +104,7 @@ textarea,input:focus{
     border-bottom: 1px solid #e6e6e6;
 }
 .badPrve{
-    width:55px;
+    width:50px;
     height: 40px;
     top:-24px;
     left:41%;
@@ -159,20 +128,19 @@ textarea,input:focus{
 .check-guest{
     font-size: 0.6400rem;
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 .goTank{
-    font-size: 0.6400rem;
+    font-size: 0.5547rem;
     font-weight: 600;
     color: #fff;
     background-color: #6c80a1;
     width:100%;
-    height: 70px;
-    line-height: 70px;
+    height: 55px;
+    line-height: 55px;
     margin-top: 40px;
     left:0;
     bottom: 0;
-    letter-spacing: 2px;
 }
 /****  报告提组 开始 ******/
 .badMit-report{
@@ -190,12 +158,12 @@ textarea,input:focus{
     color: #333;
 }
 .badMit-iden{
-    font-size: 0.6400rem;
+    font-size: 0.5973rem;
     color: #999;
     line-height: 30px;
 }
 .report-mar-line{
-    margin:40px 0 30px;
+    margin: 20px 0 30px;
 }
 .badMit-editor{
     font-size: 0.6827rem;
@@ -206,140 +174,6 @@ textarea,input:focus{
     padding: 30px 0;
 }
 
-
-
-.tankDetail{
-    background-color: #64c6ef;
-    height:44px;
-    line-height:44px;
-    color: #fff;
-    font-size: 15px;
-}
-.ques-avater{
-    width:20px;
-    height:20px;
-}
-.quesPer{
-    font-size: 0.5547rem;
-    color: #999999;
-}
-.ques-con-title{
-    color: #333333;
-    font-size: 0.7680rem;
-    padding: 10px 0;
-}
-
-.ques-box-shadow{
-    box-shadow: 0px 0px 10px #ddd;
-    padding:5px;
-    margin-bottom: 20px;
-}
-.liu-yan-con{
-    font-size: 0.6400rem;
-    color: #666666;
-    line-height: 24px;
-}
-.wrap-min-bottom{
-    padding-bottom: 50px!important;
-}
-#ques-mess{
-    width: calc(100% - 10px);
-    height:330px;
-    overflow-y: hidden;
-    padding:5px;
-    font-size: 15px;
-    color: #666;
-    line-height: 24px;
-    border: none;
-    box-shadow: 0px 0px 10px #ddd;
-    resize: none;
-    margin-top: 20px;
-}
-.ques-answer-btn{
-    font-size: 0.6400rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #6c80a1;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    left: 0;
-    bottom: 0;
-    letter-spacing: 2px;
-}
-.telBtn{
-    width:7.1680rem;
-    height:44px;
-    background-color:#6B81A1;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 14px;
-    line-height: 44px;
-}
-.fixed-btn{
-    bottom: 0;
-    left:0;
-    margin:4%;
-}
-.ques-return{
-    color: #333;
-    background-color:#ccc;
-}
-
-.width100{
-    background-color: #f1f2f6;
-}
-
-.tankPer-outbox{
-    margin:4%;
-}
-.tank-person-header{
-    color: #333;
-    font-size: 16px;
-    line-height: 30px;
-}
-
-.tank-person-head{
-    width:40px;
-    height: 40px;
-    top: 0;
-    right:10px;
-}
-.ques-box-shadow1{
-    box-shadow: none;
-    background-color: #fff;
-}
-.tankPer-info{
-    height: 40px;
-    background-color: #f4f2fa;
-    width:100%;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    border:1px solid #dcdbe2;
-    font-size: 15px;
-    line-height: 40px;
-}
-.jianJie{
-    width:calc(100% - 10px);
-    height: 150px!important;
-    padding: 5px;
-    resize: none;
-    line-height: 28px;
-}
-.width100-btn{
-    margin-top: 20px;
-    background-color: #fff;
-}
-.width100-btn .telBtn{
-    width:6.9520rem;
-}
-.telBtn-2{
-    top: 0;
-    right:0;
-}
 /****************  主体内容 结束 ********************/
 
 
